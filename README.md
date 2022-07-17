@@ -1,2 +1,0 @@
-# Scala
-For scala tutorials
