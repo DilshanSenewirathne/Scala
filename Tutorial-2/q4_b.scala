@@ -4,7 +4,7 @@ object question4_b extends App {
 
     def revenue(price:Int)= attendees(price)*price;
 
-    def cost(price:Int)=500 + attendees(price);
+    def cost(price:Int)=500 + 3*attendees(price);
 
     def profit(price:Int)=revenue(price) - cost(price);
 
