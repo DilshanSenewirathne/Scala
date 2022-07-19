@@ -20,11 +20,11 @@ object question3 extends App {
     println (-2 * ( g - k ) +c)
 
     // c=c++
-    println (c);
+    println (c==c);
     c+=1;   //c++
 
     // c=++c*a++
     c+=1
-    println (c*a)
+    println (c==c*a)
     a+=1
 }
