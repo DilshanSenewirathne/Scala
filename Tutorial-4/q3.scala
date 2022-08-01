@@ -1,23 +1,27 @@
 object question3 extends App{
     
-    def toUpper(str:String):String={
+    def toLower(str:String):String= str.toLowerCase
+    def toUpper(str:String):String= str.toUpperCase
+
+    def formatNames(fun:String => String,name:String):Unit={
+        val formatText = fun(name)
+        print(formatText)
         
-        return str.toUpperCase
     }
 
-    def toLower(str:String):String={
-        return str.toLowerCase
-    }
+    formatNames(toUpper,"Benny")
+    println()
 
-    def formatNames(str:String,format:String):String=format match{
-        case format if (format=="toUpper") => toUpper(str)
-        case format if (format=="toLower") => toLower(str)
-    }
+    formatNames(toUpper,"Niroshan".slice(0,2))
+    formatNames(toLower,"Niroshan".slice(2,8))
+    println()
 
-    println(formatNames("Benny","toUpper"))
-    println(formatNames("Niroshan","toUpper"))
-    println(formatNames("Saman","toLower"))
-    println(formatNames("Kumara","toUpper"))
+    formatNames(toLower,"Saman".slice(0,6))
+    println()
+
+    formatNames(toUpper,"Kumara".slice(0,1))
+    formatNames(toLower,"Kumara".slice(1,5))
+    formatNames(toUpper,"Kumara".slice(5,6))
 
     
 }
